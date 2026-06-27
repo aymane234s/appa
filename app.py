@@ -3,14 +3,14 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 import math
-import streamlit.components.v1 as components  # المكتبة المطلوبة لتشغيل كود الإعلان
+import streamlit.components.v1 as components  # Required library to execute ad scripts
 
 # Import backend physics and performance modules
 import aerodynamics as aero
 import propulsion_weight as prop
 
 # ============================================================================
-# 1. PAGE CONFIGURATION (يجب أن تكون أول دالة واجهة مستخدم لتجنب الأخطاء)
+# 1. PAGE CONFIGURATION
 # ============================================================================
 st.set_page_config(
     page_title="Eco Aero Designer Pro", 
@@ -22,7 +22,7 @@ st.set_page_config(
 # ============================================================================
 st.sidebar.title("Eco Aero Pro")
 st.sidebar.markdown("**Industrial-Grade Aircraft Design & Analysis Suite**")
-st.sidebar.markdown("* Preliminary design for electric aviation*")
+st.sidebar.markdown("*Preliminary design for electric aviation*")
 
 page = st.sidebar.radio("Analysis Modules:", [
     "Vehicle Overview & KPIs", 
@@ -54,17 +54,17 @@ oswald_e = st.sidebar.number_input("Oswald Efficiency Factor (e)", min_value=0.6
 
 
 # ============================================================================
-# 3. ADVERTISEMENT SECTION (إعلانات مشروع Lambda المتكاملة)
+# 3. ADVERTISEMENT SECTION (Lambda Project Monetization)
 # ============================================================================
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("📢 الإعلانات ودعم المشروع")
+st.sidebar.subheader("📢 Sponsored Content")
 
 with st.sidebar:
-    # 1. إعلان Popunder القديم المضمون
+    # 1. Existing Popunder (Runs smoothly in the background)
     components.iframe("https://pl30099321.effectivecpmnetwork.com/db/4b/92/db4b92383ddc97608da999887f5fd381.js", height=0, width=0)
 
-    # 2. إعلان البانر القديم (468x60)
+    # 2. Existing Banner Ad (468x60)
     banner_code = """
     <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
         <script type="text/javascript">
@@ -83,28 +83,28 @@ with st.sidebar:
 
     st.sidebar.markdown("---")
 
-    # 3. إعلان الـ Popunder_1 الجديد (يعمل في الخلفية بمجرد الضغط)
+    # 3. New Popunder_1 (Triggers safely on user background interaction)
     popunder_new_code = """
     <script src="https://pl30100251.effectivecpmnetwork.com/50/b1/01/50b1013f5362b39056aaed2284f122fe.js"></script>
     """
     components.html(popunder_new_code, height=0, width=0)
 
-    # 4. إعلان الـ SocialBar_1 الجديد (يظهر كإشعار ذكي للمستخدمين)
+    # 4. New SocialBar_1 (Displays high-CTR clean user alerts)
     social_bar_code = """
     <script src="https://pl30100642.effectivecpmnetwork.com/98/ca/03/98ca03a3ae896845dea1a2f66cb410dd.js"></script>
     """
     components.html(social_bar_code, height=0, width=0)
 
-    # 5. زر الـ Smart Link الجديد (يجذب المستخدم للضغط لربح ممتاز)
-    st.info("💡 روابط ومواقع مقترحة قد تهمك:")
-    st.link_button("🔥 الانتقال إلى العروض الحصرية (SmartLink)", "https://www.effectivecpmnetwork.com/cp1j54cb2m?key=771fb76a7a71ee82219c877ea51948bb")
+    # 5. New Smart Link (Clean Call-to-Action button to optimize monetization)
+    st.info("💡 Recommended Links:")
+    st.link_button("🔥 Check Exclusive Offers", "https://www.effectivecpmnetwork.com/cp1j54cb2m?key=771fb76a7a71ee82219c877ea51948bb")
 
 
-# 6. إعلان الـ Native Banner_1 الجديد (تم وضعه أسفل الصفحة الرئيسية لضمان أقصى ظهور)
+# 6. New Native Banner_1 (Placed at the bottom of the main content area for maximum cross-device layout compatibility)
 st.markdown("---")
 native_banner_code = """
 <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin-top: 20px;">
-    <p style="font-size: 12px; color: gray; margin-bottom: 5px;">إعلانات قد تهمك (Sponsored)</p>
+    <p style="font-size: 11px; color: #888888; margin-bottom: 5px; font-family: sans-serif;">Sponsored Content</p>
     <script async="async" data-cfasync="false" src="https://pl30100640.effectivecpmnetwork.com/8569141da3e4adc87c040aa92f6807cc/invoke.js"></script>
     <div id="container-8569141da3e4adc87c040aa92f6807cc"></div>
 </div>
