@@ -52,18 +52,19 @@ st.sidebar.subheader("Aerodynamic Inputs")
 cd0_input = st.sidebar.number_input("Zero-Lift Drag Coefficient (CD₀)", min_value=0.010, max_value=0.100, value=0.025, step=0.001, format="%.4f")
 oswald_e = st.sidebar.number_input("Oswald Efficiency Factor (e)", min_value=0.60, max_value=0.98, value=0.85, step=0.01, format="%.3f")
 
+
 # ============================================================================
-# 3. ADVERTISEMENT CODE (إعلان مشروع Lambda النهائي والمضمون)
+# 3. ADVERTISEMENT SECTION (إعلانات مشروع Lambda المتكاملة)
 # ============================================================================
-st.sidebar.markdown("---")  # خط فاصل أنيق يفصل الإعلان عن الخيارات
+
+st.sidebar.markdown("---")
+st.sidebar.subheader("📢 الإعلانات ودعم المشروع")
+
 with st.sidebar:
-    # استخدام iframe يعزل كود الإعلان المنبثق تماماً ليعمل في خلفية المتصفح ويمنع السيرفر من حظره
-    components.iframe("https://pl30099321.effectivecpmnetwork.com/db/4b/92/db4b92383ddc97608da999887f5fd381.js", height=150, scrolling=False)
-# 3. NEW BANNER ADVERTISEMENT CODE (البانر الجديد مقاس 468x60)
-# ============================================================================
-st.sidebar.markdown("---")  # خط فاصل
-with st.sidebar:
-    # دمج السكريبت الأول والثاني ليعملان معاً داخل بيئة معزولة وآمنة
+    # 1. إعلان Popunder القديم المضمون
+    components.iframe("https://pl30099321.effectivecpmnetwork.com/db/4b/92/db4b92383ddc97608da999887f5fd381.js", height=0, width=0)
+
+    # 2. إعلان البانر القديم (468x60)
     banner_code = """
     <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
         <script type="text/javascript">
@@ -78,10 +79,37 @@ with st.sidebar:
         <script type="text/javascript" src="https://www.highperformanceformat.com/478176cd425efa7b2c40f8b6c31ea1e5/invoke.js"></script>
     </div>
     """
-    # قمنا بضبط الارتفاع ليكون 90 ليعطي مساحة مريحة للبانر لكي يظهر كاملاً
-    components.html(banner_code, height=90, scrolling=False)
+    components.html(banner_code, height=70, scrolling=False)
 
-# =========
+    st.sidebar.markdown("---")
+
+    # 3. إعلان الـ Popunder_1 الجديد (يعمل في الخلفية بمجرد الضغط)
+    popunder_new_code = """
+    <script src="https://pl30100251.effectivecpmnetwork.com/50/b1/01/50b1013f5362b39056aaed2284f122fe.js"></script>
+    """
+    components.html(popunder_new_code, height=0, width=0)
+
+    # 4. إعلان الـ SocialBar_1 الجديد (يظهر كإشعار ذكي للمستخدمين)
+    social_bar_code = """
+    <script src="https://pl30100642.effectivecpmnetwork.com/98/ca/03/98ca03a3ae896845dea1a2f66cb410dd.js"></script>
+    """
+    components.html(social_bar_code, height=0, width=0)
+
+    # 5. زر الـ Smart Link الجديد (يجذب المستخدم للضغط لربح ممتاز)
+    st.info("💡 روابط ومواقع مقترحة قد تهمك:")
+    st.link_button("🔥 الانتقال إلى العروض الحصرية (SmartLink)", "https://www.effectivecpmnetwork.com/cp1j54cb2m?key=771fb76a7a71ee82219c877ea51948bb")
+
+
+# 6. إعلان الـ Native Banner_1 الجديد (تم وضعه أسفل الصفحة الرئيسية لضمان أقصى ظهور)
+st.markdown("---")
+native_banner_code = """
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; margin-top: 20px;">
+    <p style="font-size: 12px; color: gray; margin-bottom: 5px;">إعلانات قد تهمك (Sponsored)</p>
+    <script async="async" data-cfasync="false" src="https://pl30100640.effectivecpmnetwork.com/8569141da3e4adc87c040aa92f6807cc/invoke.js"></script>
+    <div id="container-8569141da3e4adc87c040aa92f6807cc"></div>
+</div>
+"""
+components.html(native_banner_code, height=200, scrolling=True)
 # ============================================================================
 # 4. GLOBAL CORE CALCULATIONS
 # ============================================================================
